@@ -1,8 +1,8 @@
 /*
-	
+
 	Vectors Part II
-	
-	How to create a vector ? 
+
+	How to create a vector ?
 		> use fill constructor
 		> use range constructor
 		> use copy constructor
@@ -33,23 +33,31 @@ using namespace std;
 
 int main() {
 
-	// fill constructor 
+	// fill constructor
 	vector<int> v(5); // or vector<int> v(5, 100);
-	for(int i=0; i<v.size(); i++) {
+	for (int i = 0; i < v.size(); i++) {
 		cout << v[i] << " ";
 	}
 	cout << endl;
 
 	// copy constructor
 	vector<int> v2 = v; // or v2(v);
-	
+
 	// copy assignment operator
 	vector<int> v3;
 	v3 = v;
 
 	// range constructor
 	vector<int> v4 = {1, 2, 3, 4, 5};
-	vector<int> v5(v4.begin()+2, v4.end());
+	vector<int> v5(v4.begin() + 2, v4.end());
+
+	cout << v5.size() << " " << v5.capacity() << endl;
+
+	for (int i = 0; i < v5.size(); i++) {
+		cout << v5[i] << " ";
+	}
+
+	cout << endl;
 
 	return 0;
 }

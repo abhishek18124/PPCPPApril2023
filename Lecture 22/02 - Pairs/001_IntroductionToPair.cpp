@@ -1,8 +1,8 @@
 /*
 		https://cplusplus.com/reference/utility/pair/?kw=pair
 
-		This 'pair' class couples together a pair of values, which maybe of different 
-		types (T1 and T2).The individual values of a pair can be accessed through its 
+		This 'pair' class couples together a pair of values, which maybe of different
+		types (T1 and T2).The individual values of a pair can be accessed through its
 		public members first and second.
 */
 
@@ -15,7 +15,7 @@ int main() {
 
 	// 1. declaring an object of the 'pair' class or creating a variable of the 'pair' type
 
-	pair<int, int> p1; 	     // 'p1' is a pair to store a 'pair of integers' 
+	pair<int, int> p1; 	     // 'p1' is a pair to store a 'pair of integers'
 
 	pair<string, string> p2; // 'p2' is a pair to store a 'pair of strings'
 
@@ -39,7 +39,7 @@ int main() {
 
 	pair<char, int> p7 = make_pair('A', 1);
 
-	cout << "(" << p7.first << ", " << p7.second << ")" <<endl; // (A, 1)
+	cout << "(" << p7.first << ", " << p7.second << ")" << endl; // (A, 1)
 
 	return 0;
 }
