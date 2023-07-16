@@ -23,8 +23,10 @@ void f(int n, char* out, int i, int open_count, int close_count) {
 	if (open_count < n) {
 		out[i] = '(';
 		open_count++;
-		f(n, out, i + 1, open_count, close_count);
-		open_count--;
+		i++;
+		f(n, out, i, open_count, close_count);
+		open_count--; // backtracking step
+		i--;
 		// f(n, out, i + 1, open_count+1, close_count);
 
 	}
@@ -35,7 +37,7 @@ void f(int n, char* out, int i, int open_count, int close_count) {
 		// f(n, out, i + 1, open_count, close_count + 1);
 		close_count++;
 		f(n, out, i + 1, open_count, close_count);
-		close_count--;
+		close_count--; // backtracking step
 
 	}
 }
