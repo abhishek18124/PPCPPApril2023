@@ -74,20 +74,20 @@ int helperTopDown(TreeNode* root, unordered_map<TreeNode*, int>& dp) {
 
     // 1. do not rob at the root node
 
-    int doNotRobAtRoot = helper(root->left) + helper(root->right);
+    int doNotRobAtRoot = helperTopDown(root->left, dp) + helperTopDown(root->right, dp);
 
     // 2. rob at the root node
 
     int robAtRoot = root->val;
 
     if (root->left != NULL) {
-        robAtRoot += helper(root->left->left);
-        robAtRoot += helper(root->left->right);
+        robAtRoot += helperTopDown(root->left->left, dp);
+        robAtRoot += helperTopDown(root->left->right, dp);
     }
 
     if (root->right != NULL) {
-        robAtRoot += helper(root->right->left);
-        robAtRoot += helper(root->right->right);
+        robAtRoot += helperTopDown(root->right->left, dp);
+        robAtRoot += helperTopDown(root->right->right, dp);
     }
 
     return dp[root] = max(doNotRobAtRoot, robAtRoot);
