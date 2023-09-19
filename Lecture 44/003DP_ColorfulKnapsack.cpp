@@ -139,7 +139,13 @@ int colorfulKnapsack(vector<int>& w, vector<int>& c, int n, int m, int x) {
     }
 
     // return helper(w, c, n, m, x, 1);
-    return helperTopDown(w, c, n, m, x, 1);
+
+    // return helperTopDown(w, c, n, m, x, 1);
+
+    int ans = helperTopDown(w, c, n, m, x, 1);
+
+    return ans == INT_MAX ? -1 : ans;
+
 }
 
 int main() {
