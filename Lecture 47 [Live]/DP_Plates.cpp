@@ -10,7 +10,7 @@ int helper(int N, int K, vector<vector<int>>& v, int i, int p) {
 		return 0;
 	}
 
-	if (i == N + 1) {
+	if (i == N + 1) { // p != 0
 		return INT_MIN;
 	}
 
@@ -136,21 +136,21 @@ int main() {
 			}
 		}
 
-		for (int i = 1; i <= N; i++) {
-			for (int j = 1; j <= K; j++) {
-				cout << v[i][j] << " ";
-			}
-			cout << endl;
-		}
-		cout << endl;
+		// for (int i = 1; i <= N; i++) {
+		// 	for (int j = 1; j <= K; j++) {
+		// 		cout << v[i][j] << " ";
+		// 	}
+		// 	cout << endl;
+		// }
+		// cout << endl;
 
-		cout << helper(N, K, v, 1, P) << endl;
+		// cout << helper(N, K, v, 1, P) << endl;
 
 		// vector<vector<int>> dp(N + 2, vector<int>(P + 1, -1));
 
 		// cout << helperTopDown(N, K, v, 1, P, dp) << endl;
 
-		// cout << helperBottomUp(N, K, P, v) << endl;
+		cout << helperBottomUp(N, K, P, v) << endl;
 	}
 
 	return 0;
