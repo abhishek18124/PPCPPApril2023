@@ -5,46 +5,6 @@
 class Solution {
 public:
 
-    // int helper(vector<int>& prices, int N, int i, int k, bool canBuy) {
-
-    //     // base case
-
-    //     if (i == N || k == 0) {
-
-    //         return 0;
-
-    //     }
-
-    //     // recursive case
-
-    //     // find the maximum profit you can make by completing <=k transactions starting from the ith day
-
-    //     // make a decision for the ith day
-
-    //     // 1. don't do anything
-
-    //     int ans = helper(prices, N, i + 1, k, canBuy);
-
-    //     // 2. buy a stock on the ith day
-    //     if (canBuy) {
-    //         ans = max(ans, helper(prices, N, i + 1, k, false)-prices[i]);
-
-    //         // Y - prices[i]
-    //     }
-
-    //     // 3. sell the stock on the ith day
-    //     if (!canBuy) {
-    //         ans = max(ans, helper(prices, N, i + 1, k - 1, true)+prices[i]);
-
-    //         // Z + prices[i]
-    //     }
-
-    //     return ans;
-
-
-
-    // }
-
     int helper(vector<int>& prices, int N, int i, int k, bool canBuy) {
 
         // base case
