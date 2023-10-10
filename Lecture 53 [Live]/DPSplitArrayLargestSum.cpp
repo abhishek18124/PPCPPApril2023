@@ -38,7 +38,7 @@ public:
 
 				// you've built a valid partition
 
-				return 0;
+				return 0; // or INT_MIN
 
 			}
 
